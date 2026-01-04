@@ -14,6 +14,9 @@ class Czlowiek:
         self.plec = plec
         # adam.imie = "Adam"
         # ewa.imie = "Ewa"
+    # def __add__(self, other):
+    #     pass
+
 
     # Metoda
     # Możność (możliwość), zdolność, umiejętność
@@ -28,6 +31,12 @@ class Czlowiek:
         print(f"Oto {osoba.imie}")
 
 class Dziecko(Czlowiek):
+    def __str__(self):
+        if self.plec=="M":
+            return f"Chłopiec {self.imie}"
+        else:
+            return f"Dziewczynka {self.imie}"
+
     def baw_sie(self):
         print("Ale zabawa, juhuu!!!!")
     def przedstaw_sie(self):
@@ -50,3 +59,10 @@ kain.przedstaw_sie()
 print(dir(Czlowiek))
 print(dir(adam))
 print(dir(kain))
+print(Czlowiek)
+print(str(kain))
+print(kain.__str__())
+print(adam)
+print(ewa)
+
+print(dir(int))
